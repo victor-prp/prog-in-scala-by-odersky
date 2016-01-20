@@ -27,13 +27,7 @@
   <dependencies>
 
 
-      <dependency>
-          <groupId>lib</groupId>
-          <artifactId>hummarabi.rules.engine</artifactId>
-          <version>2.9.0-0.1</version>
-          <scope>system</scope>
-          <systemPath>C:/LivePerson/scala/hammurabi/lib/hammurabi_2.9.0-0.1.jar</systemPath>
-      </dependency>
+
 
 
       <dependency>
