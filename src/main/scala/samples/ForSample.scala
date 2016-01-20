@@ -10,6 +10,5 @@ object ForSample  extends App{
       if name startsWith ("V")
     }yield name
 
-
   println(vNames)
 }
