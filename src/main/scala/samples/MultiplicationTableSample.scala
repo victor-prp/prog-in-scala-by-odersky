@@ -20,6 +20,7 @@ object MultiplicationTableSample extends App {
     str.substring(toRemove)
   }
 
+
   def createRow(rowNumber: Int, size: Int): List[String] = {
     val row =
       for {
