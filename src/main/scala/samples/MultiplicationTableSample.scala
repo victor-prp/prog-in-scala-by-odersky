@@ -1,5 +1,7 @@
 package samples
 
+import java.util
+
 /**
  * Created by victor on 05/01/16.
  */
@@ -38,8 +40,7 @@ object MultiplicationTableSample extends App {
         rowNumber <- 1 to size
       } yield createRow(rowNumber, size)
 
-    val emptyList: List[String] = List()
-    allRows.foldLeft(emptyList) {
+    allRows.foldLeft(List.empty[String]) {
       (prev, curr) => prev ::: curr
     }
   }
