@@ -14,4 +14,15 @@ object ClosureSample extends App{
   val plus_ten = Closures.makeIncreaser(10)
   val result = plus_ten(20)
   println(result)
+
+
+  //The following shows how clojure is influenced by 'more'
+  var more = 10
+  val increase_by_more = (x: Int) => x + more
+
+  println(increase_by_more(1))
+
+  more = 20
+  println(increase_by_more(1))
+
 }
