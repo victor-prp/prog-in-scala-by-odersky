@@ -18,7 +18,7 @@ object MultiplicationTableSample extends App {
 
   def prettyStringFrom(num: Int): String = {
     val str = "    " + num
-    val toRemove = str.length - 4;
+    val toRemove = str.length - 4
     str.substring(toRemove)
   }
 
