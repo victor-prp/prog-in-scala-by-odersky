@@ -9,8 +9,8 @@ class TailRecursion(value:Double = random,
                     accuracy:Double = 0.00001 //the accuracy defines how close must
                                               //the approximation be to the given value
                      ) {
-  require(value > 0, "'someValue' must be in range (0,1)")
-  require(value < 1, "'someValue' must be in range (0,1)")
+  require(value > 0, "'value' must be in range (0,1)")
+  require(value < 1, "'value' must be in range (0,1)")
   require(accuracy > 0, "'accuracy' must be in range (0,1)")
   require(accuracy < 1, "'accuracy' must be in range (0,1)")
 
