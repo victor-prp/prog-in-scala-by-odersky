@@ -14,7 +14,6 @@ class TailRecursion(value:Double = random,
   require(accuracy > 0, "'accuracy' must be in range (0,1)")
   require(accuracy < 1, "'accuracy' must be in range (0,1)")
 
-
   def isGoodEnough(guess: Double): Boolean = abs(value - guess) < accuracy
 
   @tailrec
