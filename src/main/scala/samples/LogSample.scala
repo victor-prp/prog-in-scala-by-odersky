@@ -25,7 +25,7 @@ object LogSample extends App{
   scalaDefaultLog.info("this is a scala log that prints info message")
 
   /**
-   * Lets demonstrate both will not print a message if not required
+   * Lets demonstrate Stupid and Smart loggers - both will not print a message if not required
    */
 
   val smartErrorLog = SmartLog(LogLevel.ERROR)
@@ -33,7 +33,6 @@ object LogSample extends App{
   //since the log is in error level the next invocation will not print it
   //additionally it will not even construct the log string since it uses 'by-name' parameter
   smartErrorLog.info("a"+"b"+"c"+"d")
-
 
 
   val stupidErrorLog = StupidLog(LogLevel.ERROR)
