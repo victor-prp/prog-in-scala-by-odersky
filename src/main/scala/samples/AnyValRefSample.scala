@@ -28,9 +28,10 @@ object AnyValRefSample extends App{
   val implicitRef1:ImplicitRef = new ImplicitRef(1)
   val implicitRef2:ImplicitRef = new ImplicitRef(1)
 
-  println
-  println
-  println
+  println()
+  println()
+  println()
+
   println("================ImplicitRef behavior================")
   println(s" implicitRef1 == implicitRef2: ${implicitRef1 == implicitRef2} ")
   println(s" implicitRef1 equals implicitRef2: ${implicitRef1 equals implicitRef2} ")
