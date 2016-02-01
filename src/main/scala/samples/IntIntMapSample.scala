@@ -6,7 +6,7 @@ import org.victor.patternmatching._
 object IntIntMapSample extends  App{
   /**
    * This example shows scala cannot identify the actual type at runtime
-   * Since iy uses type erasure and this info is not available at runtime
+   * Since it uses type erasure and type info is not available at runtime
    */
   val intIntMap = Map(1 -> 1)
   println(s"is intIntMap defined as Map[Int,Int]: ${isIntIntMap(intIntMap)}")
