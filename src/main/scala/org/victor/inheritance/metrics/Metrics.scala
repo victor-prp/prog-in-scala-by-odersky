@@ -15,21 +15,13 @@ object Metrics {
   def counter(name: String): Counter = {
     registry.putIfAbsent(name, Counter())
     val result = registry.get(name).get
-    result match {
-      case counter: Counter =>
-        counter
-      case _ => throw new RuntimeException(s" ${name} is not a Counter");
-    }
+    toCounter(result)
   }
 
   def gauge(name: String): Gauge = {
     registry.putIfAbsent(name, Gauge())
     val result = registry.get(name).get
-    result match {
-      case gauge: Gauge =>
-        gauge
-      case _ => throw new RuntimeException(s" ${name} is not a Gauge");
-    }
+    toGauge(result)
   }
 
   def counters: collection.Map[String, Counter] =
@@ -50,11 +42,19 @@ object Metrics {
   }
   
   def toCounter(metric:Metric ):Counter = {
-    metric.asInstanceOf[Counter]
+    metric match {
+      case counter: Counter =>
+        counter
+      case _ => throw new RuntimeException(s" ${metric} is not a Counter");
+    }
   }
 
   def toGauge(metric:Metric ):Gauge = {
-    metric.asInstanceOf[Gauge]
+    metric match {
+      case counter: Gauge =>
+        counter
+      case _ => throw new RuntimeException(s" ${metric} is not a Gauge");
+    }
   }
 
   def gauge: ((String, Metric)) => Boolean = {
