@@ -24,7 +24,7 @@ object ForPatternSample extends App{
 
 
   def isReal( opt:Option[Any]) =  opt match {
-    case Some(opt) => true
+    case Some(_) => true
     case _ => false
   }
 }
