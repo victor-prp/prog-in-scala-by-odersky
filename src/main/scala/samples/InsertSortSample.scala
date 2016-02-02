@@ -1,5 +1,5 @@
 package samples
-import org.victor.lists.patternmatching._
+import org.victor.lists.patternmatching.InsertSort._
 
 /**
  * @author victorp

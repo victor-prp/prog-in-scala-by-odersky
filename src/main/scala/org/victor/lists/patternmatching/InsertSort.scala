@@ -1,12 +1,9 @@
-package org.victor.lists
-
-import com.sun.javafx.collections.transformation.SortedList
+package org.victor.lists.patternmatching
 
 /**
  * @author victorp
  */
-package object patternmatching {
-
+object InsertSort {
   def isort(list : List[Int]):List[Int] = list match {
     case List() => List.empty
     case first::tail => insert(first,sorted(tail))
@@ -21,6 +18,5 @@ package object patternmatching {
 
   //alias for isort
   private val sorted:List[Int]=>List[Int] = isort
-
 
 }
