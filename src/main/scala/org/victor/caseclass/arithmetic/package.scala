@@ -30,7 +30,7 @@ package object arithmetic {
     case _ => expr
   }
 
-  def simplifyBinOp(expr: Expr) =expr match {
+  def simplifyBinOp(expr: Expr) = expr match {
     case BinOp("+", e, Number(0)) => simplifyAll(e)
     case BinOp("+", Number(0),e) => simplifyAll(e)
     case BinOp("*", Number(1),e) => simplifyAll(e)
