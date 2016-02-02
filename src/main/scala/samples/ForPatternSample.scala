@@ -23,7 +23,6 @@ object ForPatternSample extends App{
     .foreach(real => println(real.get))
 
 
-
   def isReal( opt:Option[Any]) =  opt match {
     case Some(opt) => true
     case _ => false
