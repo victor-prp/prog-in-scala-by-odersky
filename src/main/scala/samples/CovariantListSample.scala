@@ -15,5 +15,6 @@ object CovariantListSample extends App{
   //As opposite to Java where Collections are NOT covariant
   val expressions:List[Expr] = numbers:::vars
 
+
   println(expressions)
 }
