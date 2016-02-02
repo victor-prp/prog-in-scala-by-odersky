@@ -17,4 +17,8 @@ object CovariantListSample extends App{
 
 
   println(expressions)
+
+  //This code works since List() is List[Nothing]
+  //Nothing extends every
+  val xs: List[String] = List()
 }
