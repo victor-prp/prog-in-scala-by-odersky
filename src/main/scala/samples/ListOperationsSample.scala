@@ -24,20 +24,19 @@ object ListOperationsSample extends App{
   println(s"reversed again: ${reverseAgain(List(1,2,3,4))}")
 
 
+
   def reverse(list:List[Int]) = {
     (List[Int]() /: list) {(prevList,element) => element :: prevList}
   }
 
   def reverseAgain(list:List[Int]) = {
-    val fold = list.foldLeft(List[Int]())
-    fold{
-      addToTop
-    }
+    val foldFromEmpty = list.foldLeft(List[Int]())
+    foldFromEmpty{addToTop()}
   }
 
 
 
-  def addToTop(list:List[Int], element:Int):List[Int] = {
+  def addToTop()(list:List[Int], element:Int):List[Int] = {
     element :: list
   }
 
