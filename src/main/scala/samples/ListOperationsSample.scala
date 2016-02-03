@@ -18,4 +18,29 @@ object ListOperationsSample extends App{
 
   val flattenedList:List[Any] = pairsList.flatten
 
+
+  println(s"reversed: ${reverse(List(1,2,3,4))}")
+
+  println(s"reversed again: ${reverseAgain(List(1,2,3,4))}")
+
+
+  def reverse(list:List[Int]) = {
+    (List[Int]() /: list) {(prevList,element) => element :: prevList}
+  }
+
+  def reverseAgain(list:List[Int]) = {
+    val fold = list.foldLeft(List[Int]())
+    fold{
+      addToTop
+    }
+  }
+
+
+
+  def addToTop(list:List[Int], element:Int):List[Int] = {
+    element :: list
+  }
+
 }
+
+
