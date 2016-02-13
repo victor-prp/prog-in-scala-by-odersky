@@ -15,9 +15,14 @@ object PartialFunSample extends App{
     println(s"extractVal(Option.empty): ${extractVal(Option.empty)}")
   }
 
+  swallow{
+    //here we see 'extractValue' has the same meaning as 'extractVal' but is defined as def and not val
+    println(s"extractValue(Option.empty): ${extractValue(Option.empty)}")
+  }
+
 
   swallow{
-    //this call will throw an Exception since 'extractVal' is undefined for empty
+    //this call will throw an custom Exception since 'extractVal' is undefined for empty
     def invokeIfDefined(opt:Option[Int]) = {
       if (extractValPartially.isDefinedAt(opt)){
         extractValPartially(opt)

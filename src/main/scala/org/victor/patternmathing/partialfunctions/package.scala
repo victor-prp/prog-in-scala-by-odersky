@@ -29,4 +29,8 @@ package object partialfunctions {
     case Some(value) => value
     case None => default
   }
+
+  def extractValue(opt:Option[Int]): Int =  opt match{
+    case Some(value) => value
+  }
 }

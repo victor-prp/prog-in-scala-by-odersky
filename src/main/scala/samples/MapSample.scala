@@ -15,4 +15,20 @@ object MapSample extends App{
 
   treasureMap.foreach(printKeyVal)
 
+  println(countWords("key, nothing, value, optional, key, scala, map, set key"))
+
+  def countWords(text: String) = {
+    val counts = Map.empty[String, Int]
+    for (rawWord <- text.split("[ ,!.]+")) {
+      val word = rawWord.toLowerCase
+      val oldCount =
+        if (counts.contains(word)) counts(word)
+        else 0
+      counts(word) = oldCount+1
+    }
+    counts
+  }
+
+
+
 }

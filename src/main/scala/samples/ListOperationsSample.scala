@@ -30,8 +30,8 @@ object ListOperationsSample extends App{
   }
 
   def reverseAgain(list:List[Int]) = {
-    val foldFromEmpty = list.foldLeft(List[Int]())
-    foldFromEmpty{addToTop()}
+    //val foldFromEmpty = list.foldLeft(List[Int]())
+    //foldFromEmpty{addToTop()}
   }
 
 

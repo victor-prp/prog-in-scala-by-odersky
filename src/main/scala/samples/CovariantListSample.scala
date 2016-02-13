@@ -11,7 +11,7 @@ object CovariantListSample extends App{
   val vars:List[Var] = List(Var("N"), Var("M"))
 
 
-  //Here we see how easilly namber and vars can be concatenated and assigned to more general list
+  //Here we see how easily number and vars can be concatenated and assigned to more general list
   //As opposite to Java where Collections are NOT covariant
   val expressions:List[Expr] = numbers:::vars
 
