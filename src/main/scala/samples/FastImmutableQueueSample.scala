@@ -1,6 +1,6 @@
 package samples
 
-import org.victor.fastqueue.{PrintableQueue, FastImmutableQueue}
+import org.victor.fastqueue.{Queue, FastImmutableQueue}
 
 /**
  * @author victorp
@@ -23,4 +23,14 @@ object FastImmutableQueueSample extends App{
   println(q3)
 
 
+  //Does not compile - the type is not specified
+ //val noTypeQueue:Queue =  FastImmutableQueue()
+
+  //Compiles since the type is String
+  val stringTypeQueue:Queue[String] = FastImmutableQueue()
+  var genericQ:Queue[AnyRef] = FastImmutableQueue()
+
+  genericQ = stringTypeQueue
+
+  println(s" covariant queue: ${stringTypeQueue.enqueue(3).enqueue("abc")}")
 }

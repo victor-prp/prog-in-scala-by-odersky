@@ -23,8 +23,11 @@ class FastImmutableQueue[T] private(
     val q = mirror
     new FastImmutableQueue(q.leading.tail, q.trailing)
   }
-  
-  def enqueue(x: T) = {
+
+  /**
+   * @return new queue with a given element appended at the end
+   */
+  override def enqueue[E >: T](x: E): Queue[E] = {
     new FastImmutableQueue(leading, x :: trailing)
   }
 
