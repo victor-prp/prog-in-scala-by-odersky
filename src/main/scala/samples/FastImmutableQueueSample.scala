@@ -27,10 +27,13 @@ object FastImmutableQueueSample extends App{
  //val noTypeQueue:Queue =  FastImmutableQueue()
 
   //Compiles since the type is String
-  val stringTypeQueue:Queue[String] = FastImmutableQueue()
+  var stringTypeQueue:Queue[String] = FastImmutableQueue()
   var genericQ:Queue[AnyRef] = FastImmutableQueue()
 
   genericQ = stringTypeQueue
 
   println(s" covariant queue: ${stringTypeQueue.enqueue(3).enqueue("abc")}")
+
+  //Does not compile - stringTypeQueue is a subtype of genericQ but not vice versa!!!
+  //stringTypeQueue = genericQ
 }
