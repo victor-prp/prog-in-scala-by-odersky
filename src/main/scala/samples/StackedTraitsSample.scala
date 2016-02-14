@@ -3,11 +3,7 @@ package samples
 import org.victor.queue._
 
 /**
- * Created with IntelliJ IDEA.
- * User: Victor
- * Date: 26/08/12
- * Time: 00:38
- * To change this template use File | Settings | File Templates.
+ * @author victorp
  */
 object StackedTraitsSample extends App{
 
