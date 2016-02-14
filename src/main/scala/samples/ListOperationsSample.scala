@@ -21,7 +21,7 @@ object ListOperationsSample extends App{
 
   println(s"reversed: ${reverse(List(1,2,3,4))}")
 
-  println(s"reversed again: ${reverseAgain(List(1,2,3,4))}")
+  //println(s"reversed again: ${reverseAgain(List(1,2,3,4))}")
 
 
 
@@ -29,10 +29,10 @@ object ListOperationsSample extends App{
     (List[Int]() /: list) {(prevList,element) => element :: prevList}
   }
 
-  def reverseAgain(list:List[Int]) = {
-    //val foldFromEmpty = list.foldLeft(List[Int]())
-    //foldFromEmpty{addToTop()}
-  }
+//  def reverseAgain(list:List[Int]) = {
+//    val foldFromEmpty = list.foldLeft(List[Int]())
+//    foldFromEmpty{addToTop()}
+//  }
 
 
 
